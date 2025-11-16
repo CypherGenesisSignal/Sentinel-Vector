@@ -1,0 +1,4 @@
+Sentinel Vector – Prototype 0.1
+Initial architecture demonstration.
+Includes basic orchestrator, routing layer, and agent expansion.
+No functional security logic implemented yet.
