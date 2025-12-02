@@ -1,0 +1,58 @@
+Holonomic Scale Integration
+
+Purpose: Represent the scope and dimensional weight of a memory event so downstream systems (Sentinel Vector, Veritas OS, or Cilow AI’s persistent layer) can decide how strongly, how long, and how broadly that event should be retained or surfaced.
+
+Holonomic scale is not “importance.”
+Holonomic scale is dimensional footprint.
+
+It answers:
+
+How many layers of the system does this event touch?
+
+How deeply does the event modify the agent’s operational world model?
+
+Is this event local or cross-contextual?
+
+Should this event be surfaced transversally across domains?
+
+Placement
+
+Holonomic scale becomes its own top-level field in the JSON schema.
+
+Example:
+
+"holonomic_scale": {
+    "breadth": 2,
+    "depth": 4,
+    "coherence": 0.87
+}
+
+Why this structure?
+
+Because holonomic cognition isn’t one number.
+It's a 3-plane construct.
+
+1. Breadth
+
+How many operational domains the memory touches.
+Example scale: 0 to 5.
+
+2. Depth
+
+How far the memory affects the agent’s internal models.
+Example scale: 0 to 5.
+
+3. Coherence
+
+How well this memory fits into the existing world model.
+Range: 0.0 to 1.0.
+
+This triple makes holonomic scale:
+
+machine parsable
+
+model agnostic
+
+compatible with future LLM memory codecs
+
+interoperable between SV, Veritas OS, and external systems
