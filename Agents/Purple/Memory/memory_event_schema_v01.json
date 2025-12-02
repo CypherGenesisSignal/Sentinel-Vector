@@ -1,0 +1,19 @@
+{
+  "event_id": "",
+  "timestamp": "",
+  "source_agent": "",
+  "raw_payload": {},
+  "metadata": {
+    "tags": [],
+    "confidence": 0.0,
+    "agent_role": ""
+  },
+  "holonomic_scale": {
+    "breadth": 0,
+    "depth": 0,
+    "coherence": 0.0
+  },
+  "retain": false,
+  "broadcast_to": [],
+  "context_mutations": {}
+}
