@@ -15,3 +15,22 @@ The Purple Orchestrator coordinates all color agents through a deterministic eve
 9. Log to Memory Event Ledger  
 
 ## Pseudocode
+
+```
+loop:
+    event = receive_event()
+    norm = normalize(event)
+    st_context = stm.retrieve(norm)
+    
+    red_out = red.process(norm, st_context)
+    blue_out = blue.process(norm, st_context)
+    green_out = green.process(norm, st_context)
+    
+    merged = router.merge([red_out, blue_out, green_out])
+    
+    final = memory_hooks.apply(merged)
+    
+    ledger.log(event, merged, final)
+    
+    send(final)
+```
